@@ -534,6 +534,7 @@ MonoBehaviour:
   maxSpeed: {x: 2, y: 0, z: 6}
   quickTurnAnglePerSec: 90
   turnAnglePerSec: 45
+  currentVelocity: {x: 0, y: 0, z: 0}
   katamari: {fileID: 1526761761}
 --- !u!4 &1145327073 stripped
 Transform:
@@ -769,9 +770,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526761755}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 10
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -821,5 +822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0b6e09a4a024a18ab9da6d156b7732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 1145327073}
+  player: {fileID: 1145327069}
+  playerControl: {fileID: 1145327072}
   turn: 200

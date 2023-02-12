@@ -26,7 +26,7 @@ public class CharacterControl : MonoBehaviour
     private Vector3 brakeRatePerSec;
 
     // Current character state
-    private Vector3 currentVelocity;
+    public Vector3 currentVelocity;
     private float currentTurn;
     private bool inReverse;
     private bool accelChange;
