@@ -527,13 +527,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b68d362d050b409b993e4f86c7e31cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelTime: 2.5
-  decelTime: 3
-  brakeTime: 0.3
-  maxSpeed: 6
+  accelTime: {x: 0.5, y: 0, z: 2}
+  decelTime: {x: 1.5, y: 0, z: 3}
+  brakeTime: {x: 0.5, y: 0, z: 0.5}
+  maxSpeed: {x: 2, y: 0, z: 6}
   quickTurnAnglePerSec: 90
   turnAnglePerSec: 45
-  forwardVelocity: 0
 --- !u!4 &1145327073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c3354c7d1b4184ec98901f6740bb3bca, type: 3}

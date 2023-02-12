@@ -13,20 +13,20 @@ public class CharacterControl : MonoBehaviour
     private Rigidbody rb;
 
     // Character stats
-    public float accelTime = 2.5f;
-    public float decelTime = 6f;
-    public float brakeTime = 1f;
-    public float maxSpeed = 6f;
+    public Vector3 accelTime = new Vector3(0.5f, 0, 2f);
+    public Vector3 decelTime = new Vector3(1f, 0, 3f);
+    public Vector3 brakeTime = new Vector3(0.5f, 0, 0.5f);
+    public Vector3 maxSpeed = new Vector3(2f, 0, 6f);
     public float quickTurnAnglePerSec = 90f;
     public float turnAnglePerSec = 45f;
 
     // Stats calculated at runtime
-    private float accelRatePerSec;
-    private float decelRatePerSec;
-    private float brakeRatePerSec;
+    private Vector3 accelRatePerSec;
+    private Vector3 decelRatePerSec;
+    private Vector3 brakeRatePerSec;
 
     // Current character state
-    private float forwardVelocity;
+    private Vector3 currentVelocity;
     private float currentTurn;
     private bool inReverse;
     private bool accelChange;
@@ -35,10 +35,10 @@ public class CharacterControl : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        accelRatePerSec = maxSpeed / accelTime;
-        decelRatePerSec = -maxSpeed / decelTime;
-        brakeRatePerSec = -maxSpeed / brakeTime;
-        forwardVelocity = 0.0f;
+        accelRatePerSec = new Vector3(maxSpeed.x / accelTime.x, 0, maxSpeed.z / accelTime.z);
+        decelRatePerSec = new Vector3(-maxSpeed.x / decelTime.x, 0, -maxSpeed.z / decelTime.z);
+        brakeRatePerSec = new Vector3(-maxSpeed.x / brakeTime.x, 0, -maxSpeed.z / brakeTime.z);
+        currentVelocity = Vector3.zero;
         currentTurn = 0.0f;
         inReverse = false;
         accelChange = false;
@@ -50,43 +50,20 @@ public class CharacterControl : MonoBehaviour
         inputL = new Vector3(Input.GetAxisRaw("LHorizontal"), 0, Input.GetAxisRaw("LVertical"));
         inputR = new Vector3(Input.GetAxisRaw("RHorizontal"), 0, Input.GetAxisRaw("RVertical"));
 
+        // Grab distances and dot product of the 2 joystick inputs
         float dotLR = Vector3.Dot(inputL, inputR);
         float distLR = Vector3.Distance(inputL, inputR);
         
         if(dotLR == 1.0f)
         {
-            if(inputL.z == 1.0f) 
+            // Moving ball
+            if(Mathf.Abs(inputL.z) == 1.0f)
             {
-                // Add acceleration
-                if(forwardVelocity >= 0)
-                {
-                    Accelerate(accelRatePerSec);
-                } 
-                else 
-                {
-                    Brake(brakeRatePerSec);
-                }
+                HandleAccelAndBrake(inputL.z, ref currentVelocity.z, ref currentVelocity.x, accelRatePerSec.z, brakeRatePerSec.z, brakeRatePerSec.x, maxSpeed.z);
             } 
-            else if (inputL.z == -1.0f) 
+            else 
             {
-                // brake
-                if(forwardVelocity > 0)
-                {
-                    Brake(brakeRatePerSec);
-                } 
-                else 
-                {
-                    inReverse = true;
-                    Accelerate(accelRatePerSec);
-                }
-            } 
-            else if (inputL.x == 1.0f) 
-            {
-
-            }
-            else if (inputL.x == -1.0f)
-            {
-
+                HandleAccelAndBrake(inputL.x, ref currentVelocity.x, ref currentVelocity.z, accelRatePerSec.x, brakeRatePerSec.x, brakeRatePerSec.z, maxSpeed.x);
             }
         }
         else if (dotLR == -1.0f)
@@ -111,13 +88,15 @@ public class CharacterControl : MonoBehaviour
                 Rotate(turnAnglePerSec, rotateDirectionR);
             }
         }
-        else
+        
+        if(!accelChange)
         {
-            Brake(decelRatePerSec);
+            currentVelocity.z = Brake(currentVelocity.z, decelRatePerSec.z);
+            currentVelocity.x = Brake(currentVelocity.x, decelRatePerSec.x);
         }
 
         rb.rotation = Quaternion.Euler(rb.rotation.eulerAngles + new Vector3(0, currentTurn, 0));
-        rb.velocity = forwardVelocity * transform.forward;
+        rb.velocity = currentVelocity.z * transform.forward + currentVelocity.x * transform.right;
 
         // reset for next frame
         currentTurn = 0f;
@@ -127,30 +106,48 @@ public class CharacterControl : MonoBehaviour
         accelChange = false;
     }
 
-    void Accelerate(float rate)
-    {
-        float reverseFactor = inReverse ? -1 : 1;
-        forwardVelocity += rate * Time.deltaTime * reverseFactor;
-        forwardVelocity = Mathf.Clamp(forwardVelocity, -maxSpeed, maxSpeed);
-        accelChange = true;
+    void HandleAccelAndBrake(float input, ref float mainVelocity, ref float oppVelocity, float accelRate, float mainBrakeRate, float oppBrakeRate, float maxSpeed)
+    {   
+        float reverseFactor = Mathf.Sign(input);
+        inReverse = reverseFactor == -1.0f ? true : false;
+        if(mainVelocity * reverseFactor >= 0)
+        {
+            mainVelocity = Accelerate(mainVelocity, accelRate, maxSpeed);
+            oppVelocity = Brake(oppVelocity, oppBrakeRate);
+        }
+        else
+        {
+            mainVelocity = Brake(mainVelocity, mainBrakeRate);
+        }
     }
 
-    void Brake(float rate)
+    float Accelerate(float velocity, float rate, float maxSpeed)
     {
-        if(forwardVelocity == 0)
-        {
-            return;
-        }
-        float reverseFactor = Mathf.Sign(forwardVelocity);
-        forwardVelocity = Mathf.Abs(forwardVelocity);
-        forwardVelocity += rate * Time.deltaTime;
-        forwardVelocity = Mathf.Max(forwardVelocity, 0) * reverseFactor;
+        float reverseFactor = inReverse ? -1 : 1;
+        velocity += rate * Time.deltaTime * reverseFactor;
+        velocity = Mathf.Clamp(velocity, -maxSpeed, maxSpeed);
         accelChange = true;
+        return velocity;
+    }
+
+    float Brake(float velocity, float rate)
+    {
+        if(velocity == 0)
+        {
+            return 0;
+        }
+        float reverseFactor = Mathf.Sign(velocity);
+        velocity = Mathf.Abs(velocity);
+        velocity += rate * Time.deltaTime;
+        velocity = Mathf.Max(velocity, 0) * reverseFactor;
+        accelChange = true;
+        return velocity;
     }
 
     void Rotate(float rate, float dir)
     {
         currentTurn = rate * Time.deltaTime * dir;
+        accelChange = true;
     }
 
 }
