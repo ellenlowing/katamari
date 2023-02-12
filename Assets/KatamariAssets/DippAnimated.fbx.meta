@@ -1,0 +1,816 @@
+fileFormatVersion: 2
+guid: c3354c7d1b4184ec98901f6740bb3bca
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 2943022288031924166
+    second: OUJI20 (merge)|OUJI20 (merge)Action
+  - first:
+      74: -5256623413951514412
+    second: OUJI20 (merge)|OUJI20 (merge)Action.001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OUJI01_face.001
+    second: {fileID: 2100000, guid: c5b69d0b57ada4b06b4839c669b28fd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OUJI01_tear.001
+    second: {fileID: 2100000, guid: bb3b867d955254fec86e8568476e555b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OUJI20_body
+    second: {fileID: 2100000, guid: 9dad2532462be4dfaa5f56114f0a4a9c, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: OUJI20 (merge)/OUJI20/JNT_root
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: OUJI20 (merge)|OUJI20 (merge)Action.001
+      takeName: OUJI20 (merge)|OUJI20 (merge)Action.001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: JNT_waist
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_leg_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_leg_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_knee_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_knee_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_ankle_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_ankle_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_spine_01
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_spine_02
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_shoulder_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_shoulder_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_arm_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_arm_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_elbow_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_elbow_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_hand_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_hand_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JNT_mouth
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: katamari(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: angry_01_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: antena_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: body_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: cheak_01_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: eye_01_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: eye_02_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: eye_03_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: eye_04_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: eye_05_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: face_01_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: face_02_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: face_03_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: hand_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: head_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: hip_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: leg_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_01_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_02_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_03_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_04_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_05_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_06_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_07_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_08_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_09_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_10_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mouth_11_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: nose_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: OUJI20 (merge)
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: -0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: OUJI20
+      parentName: OUJI20 (merge)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 7.1054274e-15, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body_root
+      parentName: OUJI20
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: face_root
+      parentName: OUJI20
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye
+      parentName: face_root
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye_01
+      parentName: eye
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye_02
+      parentName: eye
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye_03
+      parentName: eye
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye_04
+      parentName: eye
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye_05
+      parentName: eye
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: face
+      parentName: face_root
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: face_01
+      parentName: face
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: face_02
+      parentName: face
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: face_03
+      parentName: face
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth
+      parentName: face_root
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_01
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_02
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_03
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_04
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_05
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_06
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_07
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_08
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_09
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_10
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mouth_11
+      parentName: mouth
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: parts
+      parentName: face_root
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: angry_01
+      parentName: parts
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cheak_01
+      parentName: parts
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shock_01
+      parentName: parts
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tear_01
+      parentName: parts
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_root
+      parentName: OUJI20
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_waist
+      parentName: JNT_root
+      position: {x: -0, y: 0.00263451, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_leg_L
+      parentName: JNT_waist
+      position: {x: -0.0006163, y: 0, z: 1.474515e-19}
+      rotation: {x: -4.7283066e-10, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.9999998}
+    - name: JNT_knee_L
+      parentName: JNT_leg_L
+      position: {x: -0, y: -0.0010589004, z: -5.5879353e-11}
+      rotation: {x: 0.0000000021993714, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: JNT_ankle_L
+      parentName: JNT_knee_L
+      position: {x: -0, y: -0.0009844007, z: -2.0954757e-11}
+      rotation: {x: 0.000000101705886, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000005, z: 1.0000005}
+    - name: JNT_ankle_L_end
+      parentName: JNT_ankle_L
+      position: {x: 3.7252902e-11, y: 0.0009844288, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000036, y: 1.0000002, z: 1.0000002}
+    - name: JNT_ankle_L_end_end
+      parentName: JNT_ankle_L_end
+      position: {x: -0, y: 0.0009844283, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_leg_R
+      parentName: JNT_waist
+      position: {x: 0.0006163, y: 0, z: -1.3010425e-19}
+      rotation: {x: 1.3350387e-10, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.9999998}
+    - name: JNT_knee_R
+      parentName: JNT_leg_R
+      position: {x: -3.7252902e-11, y: -0.0010589004, z: -9.6624715e-11}
+      rotation: {x: 0.0000000029630343, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000006}
+    - name: JNT_ankle_R
+      parentName: JNT_knee_R
+      position: {x: -0, y: -0.0009844006, z: -2.0489097e-10}
+      rotation: {x: 0.000000003334776, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1.0000002}
+    - name: JNT_ankle_R_end
+      parentName: JNT_ankle_R
+      position: {x: 3.7252902e-11, y: 0.0009844285, z: 0}
+      rotation: {x: 0.000000007741846, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000036, y: 1.0000035, z: 1.0000031}
+    - name: JNT_ankle_R_end_end
+      parentName: JNT_ankle_R_end
+      position: {x: -0, y: 0.0009844283, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_spine_01
+      parentName: JNT_waist
+      position: {x: 2.0459007e-19, y: 0.0011698493, z: 6.381461e-19}
+      rotation: {x: -0, y: 0.000000009822744, z: 5.7233043e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_spine_02
+      parentName: JNT_spine_01
+      position: {x: -1.6583956e-17, y: 0.0010659748, z: 8.3266725e-19}
+      rotation: {x: 7.1054274e-15, y: -0.000000012193973, z: 1.7089561e-15, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: JNT_neck
+      parentName: JNT_spine_02
+      position: {x: 1.3114509e-17, y: 0.0014680391, z: -5.551115e-19}
+      rotation: {x: 6.6783905e-11, y: 0.0000000057946536, z: -0.0000000035419452, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_head
+      parentName: JNT_neck
+      position: {x: 2.2773746e-11, y: 0.0011459906, z: 1.1641532e-12}
+      rotation: {x: 1.8264498e-10, y: -0, z: 2.0976998e-11, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.9999998}
+    - name: JNT_antenna
+      parentName: JNT_head
+      position: {x: -3.0267983e-11, y: 0.002661792, z: -0.00013764315}
+      rotation: {x: -3.5198153e-10, y: -0.0000000024597542, z: 0.0000000012505545, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: Ef_Highlight
+      parentName: JNT_antenna
+      position: {x: -3.7252902e-11, y: 8.9406965e-10, z: 0}
+      rotation: {x: -1.4551915e-10, y: 0.0000000018499122, z: 4.814825e-35, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_antenna_end
+      parentName: JNT_antenna
+      position: {x: 2.3283063e-11, y: 0.0019339528, z: -1.1641532e-12}
+      rotation: {x: 1.826379e-10, y: -0, z: 6.293144e-11, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 1.0000005}
+    - name: JNT_antenna_end_end
+      parentName: JNT_antenna_end
+      position: {x: -0, y: 0.0019339513, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_mouth
+      parentName: JNT_head
+      position: {x: 9.3132255e-12, y: -9.604264e-11, z: 0.0015458773}
+      rotation: {x: -3.5198153e-10, y: -0.0000000024597542, z: 0.0000000012505545, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: JNT_mouth_end
+      parentName: JNT_mouth
+      position: {x: -2.3283063e-11, y: 0.0019339516, z: 2.0692822e-10}
+      rotation: {x: 1.826379e-10, y: -0, z: 6.293144e-11, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 1.0000005}
+    - name: JNT_mouth_end_end
+      parentName: JNT_mouth_end
+      position: {x: -0, y: 0.0019339507, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_nose
+      parentName: JNT_head
+      position: {x: 0.00009, y: 0.00046000074, z: 0.0015199999}
+      rotation: {x: -3.5198153e-10, y: -0.0000000024597542, z: 0.0000000012505545, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: JNT_nose_end
+      parentName: JNT_nose
+      position: {x: -6.0535965e-11, y: 0.0019339512, z: 1.9586878e-10}
+      rotation: {x: 1.826379e-10, y: -0, z: 6.293144e-11, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 1.0000005}
+    - name: JNT_nose_end_end
+      parentName: JNT_nose_end
+      position: {x: -0, y: 0.0019339513, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_shoulder_L
+      parentName: JNT_spine_02
+      position: {x: -0.00010625, y: 0.0010130054, z: 1.5520723e-12}
+      rotation: {x: -0, y: -0, z: -1.923573e-23, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: JNT_arm_L
+      parentName: JNT_shoulder_L
+      position: {x: -0.0010200001, y: -2.6540608e-11, z: -4.2604223e-12}
+      rotation: {x: -0.0000000047503477, y: 0.000000023205931, z: 0.000000030319477, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1}
+    - name: JNT_elbow_L
+      parentName: JNT_arm_L
+      position: {x: -0.0013162288, y: 9.313225e-11, z: 9.3132255e-12}
+      rotation: {x: -0.0000000036179557, y: -0.000000031428964, z: -0.000000039133198, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000002}
+    - name: JNT_hand_L
+      parentName: JNT_elbow_L
+      position: {x: -0.0012346008, y: 5.587935e-10, z: -9.3132255e-12}
+      rotation: {x: 0.00000001299962, y: 0.00000009828931, z: 0.6723667, w: 0.7402182}
+      scale: {x: 1, y: 1.0000032, z: 1.0000001}
+    - name: JNT_hand_L_end
+      parentName: JNT_hand_L
+      position: {x: -1.862645e-10, y: 0.0013627087, z: -1.0011717e-10}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.9999996, z: 1.0000001}
+    - name: JNT_hand_L_end_end
+      parentName: JNT_hand_L_end
+      position: {x: -0, y: 0.0013627082, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JNT_shoulder_R
+      parentName: JNT_spine_02
+      position: {x: 0.00010625001, y: 0.0010130054, z: -7.7623406e-13}
+      rotation: {x: -0, y: -0, z: -1.923573e-23, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: JNT_arm_R
+      parentName: JNT_shoulder_R
+      position: {x: 0.0010200001, y: 2.6540613e-11, z: -4.2604223e-12}
+      rotation: {x: -0.0000000020826079, y: -0.0000000033983776, z: -0.000000003993607, w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000002}
+    - name: JNT_elbow_R
+      parentName: JNT_arm_R
+      position: {x: 0.0013162286, y: 1.1641532e-10, z: 1.862645e-10}
+      rotation: {x: 0.0000000053699125, y: 0.000000006486162, z: 0.00000004866066, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: JNT_hand_R
+      parentName: JNT_elbow_R
+      position: {x: 0.0012346001, y: 6.519258e-10, z: 1.7927959e-10}
+      rotation: {x: 0.000000012025287, y: -0.00000010178471, z: -0.67236686, w: 0.7402181}
+      scale: {x: 1, y: 1.0000026, z: 1.0000001}
+    - name: JNT_hand_R_end
+      parentName: JNT_hand_R
+      position: {x: 7.4505804e-11, y: 0.0012337711, z: 4.8894434e-11}
+      rotation: {x: -3.0997993e-10, y: -0.0000000018323378, z: -0.000000063901474, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000002}
+    - name: JNT_hand_R_end_end
+      parentName: JNT_hand_R_end
+      position: {x: -0, y: 0.0012337714, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shock_01_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: tear_01_m
+      parentName: katamari(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: OUJI20 (merge)
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
