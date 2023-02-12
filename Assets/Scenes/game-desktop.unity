@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18388793, g: 0.22918345, b: 0.30409154, a: 1}
+  m_IndirectSpecularColor: {r: 0.17732714, g: 0.22198248, b: 0.30425364, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c3354c7d1b4184ec98901f6740bb3bca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.493
+      value: -0.495
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c3354c7d1b4184ec98901f6740bb3bca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -326,7 +326,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.58
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.802082
@@ -383,14 +383,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.8840737, y: -0.16563632, z: -0.26946166, w: 0.34404773}
+  m_LocalRotation: {x: -0.44125012, y: -0.68835396, z: 0.3375533, w: -0.4663958}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 31.269, y: -136.309, z: -145.974}
+  m_LocalEulerAnglesHint: {x: 61.2, y: -225.6, z: 37.4}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1145327073}
-  playerOffset: {x: 0, y: 0.816, z: -1.458}
+  playerOffset: {x: 0, y: 0.5, z: -0.9}
+  targetLookAt: {fileID: 1526761761}
 --- !u!1 &1145327069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c3354c7d1b4184ec98901f6740bb3bca, type: 3}
@@ -533,6 +534,7 @@ MonoBehaviour:
   maxSpeed: {x: 2, y: 0, z: 6}
   quickTurnAnglePerSec: 90
   turnAnglePerSec: 45
+  katamari: {fileID: 1526761761}
 --- !u!4 &1145327073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c3354c7d1b4184ec98901f6740bb3bca, type: 3}
@@ -565,8 +567,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6644588, y: 1.0194309, z: 0.47797564}
-  m_Center: {x: -0.025210256, y: 0.5584921, z: 0.041044626}
+  m_Size: {x: 0.6644588, y: 1.0522954, z: 0.47797564}
+  m_Center: {x: -0.025210256, y: 0.5420599, z: 0.041044626}
 --- !u!1001 &1206817062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -592,15 +594,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a5ad306ea1a49058fe53682177285d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a5ad306ea1a49058fe53682177285d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.006
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a5ad306ea1a49058fe53682177285d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3
+      value: 1.058
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a5ad306ea1a49058fe53682177285d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -767,12 +769,12 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526761755}
   serializedVersion: 2
-  m_Mass: 0.001
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!64 &1526761760
@@ -789,6 +791,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 12
   m_Mesh: {fileID: -5232142786097762045, guid: 37a5ad306ea1a49058fe53682177285d, type: 3}
+--- !u!4 &1526761761 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37a5ad306ea1a49058fe53682177285d, type: 3}
+  m_PrefabInstance: {fileID: 1206817062}
+  m_PrefabAsset: {fileID: 0}
 --- !u!135 &1526761762
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -802,3 +809,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.022896389
   m_Center: {x: -0.0006389678, y: 0.00036274045, z: -0.0007345259}
+--- !u!114 &1526761763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526761755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0b6e09a4a024a18ab9da6d156b7732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 1145327073}
+  turn: 200

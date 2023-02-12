@@ -31,6 +31,9 @@ public class CharacterControl : MonoBehaviour
     private bool inReverse;
     private bool accelChange;
 
+    // Katamari state
+    public Transform katamari;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -56,7 +59,7 @@ public class CharacterControl : MonoBehaviour
         
         if(dotLR == 1.0f)
         {
-            // Moving ball
+            // Moving 
             if(Mathf.Abs(inputL.z) == 1.0f)
             {
                 HandleAccelAndBrake(inputL.z, ref currentVelocity.z, ref currentVelocity.x, accelRatePerSec.z, brakeRatePerSec.z, brakeRatePerSec.x, maxSpeed.z);
@@ -69,23 +72,22 @@ public class CharacterControl : MonoBehaviour
         else if (dotLR == -1.0f)
         {
             // quickly rotating, only if opposing axes are in Y
-            float rotateDirection = Vector3.Dot(inputL, Vector3.back);
-            Rotate(quickTurnAnglePerSec, rotateDirection);
-            
+            float rotateDirection = Vector3.Dot(inputL, Vector3.forward);
+            RotateAroundBall(quickTurnAnglePerSec * rotateDirection);
         }
         else if (dotLR == 0.0f && distLR == 1.0f)
         {
             // rotate slowly
-            float rotateDirectionL = Vector3.Dot(inputL, Vector3.back);
-            float rotateDirectionR = Vector3.Dot(inputR, Vector3.forward);
+            float rotateDirectionL = Vector3.Dot(inputL, Vector3.forward);
+            float rotateDirectionR = Vector3.Dot(inputR, Vector3.back);
 
             if(Mathf.Abs(rotateDirectionL) > 0)
             {
-                Rotate(turnAnglePerSec, rotateDirectionL);
+                RotateAroundBall(turnAnglePerSec * rotateDirectionL);
             } 
             else 
             {
-                Rotate(turnAnglePerSec, rotateDirectionR);
+                RotateAroundBall(turnAnglePerSec * rotateDirectionR);
             }
         }
         
@@ -144,10 +146,9 @@ public class CharacterControl : MonoBehaviour
         return velocity;
     }
 
-    void Rotate(float rate, float dir)
+    void RotateAroundBall(float anglePerSec)
     {
-        currentTurn = rate * Time.deltaTime * dir;
-        accelChange = true;
+        transform.RotateAround(katamari.position, Vector3.up, anglePerSec * Time.deltaTime);
     }
 
 }
