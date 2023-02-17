@@ -7,7 +7,7 @@ public class BallControl : MonoBehaviour
 
     // Character components
     private Rigidbody rb;
-    private SphereCollider cl;
+    private MeshCollider cl;
 
     // Player (da prince) state
     public GameObject player;
@@ -19,7 +19,7 @@ public class BallControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        cl = GetComponent<SphereCollider>();
+        cl = GetComponent<MeshCollider>();
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class BallControl : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.transform.parent.name == "objectsToGather")
+        if(other.tag == "Pickup")
         {
             GameObject clone = Instantiate(other.gameObject, other.transform.position, other.transform.rotation, transform);
             clone.transform.localScale = new Vector3(clone.transform.localScale.x / transform.localScale.x, clone.transform.localScale.y / transform.localScale.y, clone.transform.localScale.z / transform.localScale.z);
