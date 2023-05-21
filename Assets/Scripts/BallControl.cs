@@ -43,8 +43,8 @@ public class BallControl : MonoBehaviour
     {
         if(other.tag == "Pickup")
         {
-            other.transform.parent = transform;
-            // PickupObject(other);
+            // other.transform.parent = transform;
+            PickupObject(other);
             // MergeObjects();
         }
     }
