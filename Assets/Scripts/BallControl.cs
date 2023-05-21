@@ -43,9 +43,47 @@ public class BallControl : MonoBehaviour
     {
         if(other.tag == "Pickup")
         {
-            GameObject clone = Instantiate(other.gameObject, other.transform.position, other.transform.rotation, transform);
-            clone.transform.localScale = new Vector3(clone.transform.localScale.x / transform.localScale.x, clone.transform.localScale.y / transform.localScale.y, clone.transform.localScale.z / transform.localScale.z);
-            Destroy(other.gameObject);
+            other.transform.parent = transform;
+            // PickupObject(other);
+            // MergeObjects();
         }
+    }
+
+    void PickupObject(Collider other)
+    {   
+        // Create clone inside katamari parent
+        GameObject clone = Instantiate(other.gameObject, other.transform.position, other.transform.rotation, transform);
+        clone.transform.localScale = new Vector3(clone.transform.localScale.x / transform.localScale.x, clone.transform.localScale.y / transform.localScale.y, clone.transform.localScale.z / transform.localScale.z);
+        // gameObject.AddComponent(typeof)
+        Destroy(other.gameObject);
+    }
+
+    void MergeObjects()
+    {
+        MeshFilter[] meshFilters = GetComponentsInChildren<MeshFilter>();
+        Mesh combinedMesh = new Mesh();
+        cl.sharedMesh = null;
+        cl.sharedMesh = combinedMesh;
+
+        CombineInstance[] combine = new CombineInstance[meshFilters.Length];
+        for(int i = 0; i < meshFilters.Length; i++)
+        {
+            if(meshFilters[i].gameObject.tag == "Pickup")
+            {
+                combine[i].mesh = meshFilters[i].sharedMesh;
+                combine[i].transform = meshFilters[i].transform.localToWorldMatrix;
+            }
+            else 
+            {
+                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                Mesh spheremesh = sphere.GetComponent<MeshFilter>().mesh;
+                combine[i].mesh = spheremesh;
+                Destroy(sphere);
+            }
+        }
+
+        combinedMesh.CombineMeshes(combine);
+        // GetComponent<MeshFilter>().sharedMesh = combinedMesh;
+        cl.sharedMesh = combinedMesh;
     }
 }
