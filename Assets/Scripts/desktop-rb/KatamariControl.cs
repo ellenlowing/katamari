@@ -8,7 +8,7 @@ public class KatamariControl : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField]
-    public Transform cameraTransform;
+    public Transform playerTransform;
 
     [SerializeField]
     public float rollSpeed = 30.0f;
@@ -23,14 +23,10 @@ public class KatamariControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();
-    }
-
-    void Move()
-    {
-        Vector3 moveVelocity = GameManager.Instance.moveVelocity;
-        Vector3 movement = (moveVelocity.z * cameraTransform.forward) + (moveVelocity.x * cameraTransform.right);
-        rb.AddForce(movement * Time.fixedDeltaTime * rollSpeed * size);
+        if(GameManager.Instance.moveVelocity.magnitude != 0 && GameManager.Instance.rotateVelocity == 0)
+        {
+            Move();
+        }
     }
 
     void OnCollisionEnter(Collision other)
@@ -40,5 +36,12 @@ public class KatamariControl : MonoBehaviour
             other.transform.parent = transform;
             size += other.transform.localScale.magnitude;
         }
+    }
+
+    void Move()
+    {
+        Vector3 moveVelocity = GameManager.Instance.moveVelocity;
+        Vector3 movement = (moveVelocity.z * playerTransform.forward) + (moveVelocity.x * playerTransform.right);
+        rb.AddForce(movement * Time.fixedDeltaTime * rollSpeed * size);
     }
 }

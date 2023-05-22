@@ -19,7 +19,8 @@ public class ObjectsSpawner : MonoBehaviour
             int idx = (int) Random.Range(0, transform.childCount);
             GameObject obj = transform.GetChild(idx).gameObject;
             Vector3 randomPos = new Vector3(Random.Range(-planeRange, planeRange), obj.transform.position.y, Random.Range(-planeRange, planeRange));
-            Instantiate(obj, randomPos, obj.transform.rotation, transform);
+            GameObject spawned = Instantiate(obj, randomPos, obj.transform.rotation, transform);
+            spawned.transform.localScale *= Random.Range(0.3f, 1.5f);
         }
     }
 }
