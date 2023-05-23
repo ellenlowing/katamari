@@ -1254,7 +1254,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   playerTransform: {fileID: 10038008}
   rollSpeed: 360
-  size: 1
   katamariVolume: 0
 --- !u!114 &1136314853
 MonoBehaviour:

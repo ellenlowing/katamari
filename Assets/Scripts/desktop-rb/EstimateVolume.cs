@@ -11,7 +11,7 @@ public class EstimateVolume : MonoBehaviour
     {
         Mesh mesh = GetComponentInChildren<MeshFilter>().sharedMesh;
 
-        if(mesh == null)
+        if(mesh != null)
         {
             volume = VolumeOfMesh(mesh) * transform.lossyScale.x * transform.lossyScale.y * transform.lossyScale.z;
         }
