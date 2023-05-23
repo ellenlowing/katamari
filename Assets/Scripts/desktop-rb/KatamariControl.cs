@@ -14,11 +14,12 @@ public class KatamariControl : MonoBehaviour
     public float rollSpeed = 30.0f;
 
     [SerializeField]
-    private float size = 1.0f;
+    public float katamariVolume = 0.0f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        katamariVolume = GetComponentInChildren<EstimateVolume>().volume;
     }
 
     void FixedUpdate()
@@ -31,10 +32,29 @@ public class KatamariControl : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.CompareTag("Pickup") && other.transform.localScale.magnitude <= size)
+        float otherVolume = -1.0f;
+        GameObject otherGameObj = other.gameObject;
+
+        // Checks if the collided object has Pickup tag
+        if(otherGameObj.CompareTag("Pickup"))
         {
-            other.transform.parent = transform;
-            size += other.transform.localScale.magnitude;
+            if(otherGameObj.GetComponent<EstimateVolume>() != null) 
+            {
+                // Grabs volume directly from collided
+                otherVolume = otherGameObj.GetComponent<EstimateVolume>().volume;
+            } 
+            else 
+            {
+                // Grabs parent of the collided object and check its volume
+                otherGameObj = other.gameObject.transform.parent.gameObject;
+                otherVolume = otherGameObj.GetComponent<EstimateVolume>().volume;
+            }
+            if(otherVolume <= katamariVolume && otherVolume > 0)
+            {
+                // If volume is nonzero and smaller than total katamari volume, roll it up
+                otherGameObj.transform.parent = transform;
+                katamariVolume += otherVolume;
+            } 
         }
     }
 
@@ -42,6 +62,6 @@ public class KatamariControl : MonoBehaviour
     {
         Vector3 moveVelocity = GameManager.Instance.moveVelocity;
         Vector3 movement = (moveVelocity.z * playerTransform.forward) + (moveVelocity.x * playerTransform.right);
-        rb.AddForce(movement * Time.fixedDeltaTime * rollSpeed * size);
+        rb.AddForce(movement * Time.fixedDeltaTime * rollSpeed * Mathf.Pow(katamariVolume, 1/3));
     }
 }
