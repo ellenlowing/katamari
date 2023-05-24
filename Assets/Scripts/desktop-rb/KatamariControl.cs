@@ -19,7 +19,7 @@ public class KatamariControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        katamariVolume = GetComponentInChildren<EstimateVolume>().volume;
+        katamariVolume = GetComponent<EstimateVolume>().volume;
     }
 
     void FixedUpdate()

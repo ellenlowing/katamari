@@ -7,7 +7,7 @@ public class EstimateVolume : MonoBehaviour
 {
     public float volume = 0;
 
-    void Start()
+    void Awake()
     {
         Mesh mesh = GetComponentInChildren<MeshFilter>().sharedMesh;
 
