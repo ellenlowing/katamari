@@ -237,9 +237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1
-  regionSize: {x: 25.01, y: 33.36}
+  minRadius: 0.3
+  maxRadius: 2.24
+  regionSize: {x: 10, y: 10.06}
   rejectionSamples: 30
-  displayRadius: 0.26
+  displayRadius: 1
 --- !u!4 &1034475135
 Transform:
   m_ObjectHideFlags: 0
@@ -248,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034475133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3222.9924, y: 866.61664, z: -27.779943}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
