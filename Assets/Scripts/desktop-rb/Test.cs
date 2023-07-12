@@ -12,7 +12,7 @@ public class Test : MonoBehaviour
     List<Vector2> points;
 
     void OnValidate() {
-        points = PoissonDiscSampling.GeneratePoints2D(radius, regionSize, rejectionSamples);
+        points = PoissonDiscSampling.GeneratePoints(radius, regionSize, rejectionSamples);
     }
     
     private void OnDrawGizmos() {

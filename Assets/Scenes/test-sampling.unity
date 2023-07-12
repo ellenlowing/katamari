@@ -239,7 +239,7 @@ MonoBehaviour:
   radius: 1
   regionSize: {x: 25.01, y: 33.36}
   rejectionSamples: 30
-  displayRadius: 0.5
+  displayRadius: 0.26
 --- !u!4 &1034475135
 Transform:
   m_ObjectHideFlags: 0
