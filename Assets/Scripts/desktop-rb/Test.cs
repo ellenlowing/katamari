@@ -16,7 +16,7 @@ public class Test : MonoBehaviour
 
     void OnValidate() {
         // points = PoissonDiscSampling.GeneratePoints(radius, regionSize, rejectionSamples);
-        points = PoissonDiscSamplingWithVariableDensity.GeneratePoints(minRadius, maxRadius, regionSize, rejectionSamples);
+        points = PoissonDiscSamplingWithVariableDensity.GeneratePoints(minRadius, maxRadius, Vector2.one, regionSize, rejectionSamples);
     }
     
     private void OnDrawGizmos() {

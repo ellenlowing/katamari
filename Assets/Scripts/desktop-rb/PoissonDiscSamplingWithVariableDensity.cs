@@ -24,8 +24,8 @@ public static class PoissonDiscSamplingWithVariableDensity
         }
     }
 
-    public static List<Point> GeneratePoints(float rmin, float rmax, Vector2 sampleRegionSize, int numSamplesBeforeRejection = 30) {
-        List<Cell> cells = new List<Cell>(); // background array
+    public static List<Point> GeneratePoints(float rmin, float rmax, Vector2 noiseScale, Vector2 sampleRegionSize, int numSamplesBeforeRejection = 30) {
+        List<Cell> cells = new List<Cell>(); 
         float cellSize = rmax / Mathf.Sqrt(2);
         int gridSizeX = Mathf.CeilToInt(sampleRegionSize.x / cellSize);
         int gridSizeY = Mathf.CeilToInt(sampleRegionSize.y / cellSize);
@@ -46,8 +46,9 @@ public static class PoissonDiscSamplingWithVariableDensity
                     if(invalid) {
                         float angle = Random.value * Mathf.PI * 2;
                         Vector2 dir = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle));
-                        float radius = Random.Range(rmin, rmax);
-                        tempPoint = new Point(px + dir.x * Random.Range(0, rmax), py + dir.y * Random.Range(0, rmax), radius);
+                        Vector2 pos = new Vector2(px + dir.x * Random.Range(0, rmax), py + dir.y * Random.Range(0, rmax));
+                        float radius = Mathf.Lerp(rmin, rmax, Mathf.PerlinNoise(pos.x * noiseScale.x, pos.y * noiseScale.y));
+                        tempPoint = new Point(pos.x, pos.y, radius);
                         invalid = false;
                     }
                     
